@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+:root{
+   --yellow:#fed330;
+   --red:#e74c3c;
+   --white:#fff;
+   --black: #644734;
+   --light-color:#777;
+   --border:.2rem solid var(--black);
+}
+
+*{
+   font-family: 'Agbalumo';
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--yellow);
+   color:var(--black);
+}
+
+::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: var(--yellow);
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   stop-opacity: 7rem;
+}
+
+section{
+   margin:0 auto;
+   max-width: 1200px;
+   padding:2rem;
+}
+
+
+
+.heading{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-bottom: 2rem;
+   margin-bottom: 2.5rem;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+   border-bottom: var(--border);
+}
+.heading h1{
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+   
+
+
+.heading p{
+   font-size: 2.3rem;
+   color:#644734;
+}
+
+.heading p a{
+   color:#644734;
+}
+
+.heading p a:hover{
+   text-decoration: underline;
+   color:#e74c3c;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   width: 100%;
+}
+
+.inline-btn,
+.inline-delete-btn,
+.inline-option-btn{
+   display: inline-block;
+}
+
+.btn,
+.delete-btn,
+.option-btn,
+.inline-btn,
+.inline-delete-btn,
+.inline-option-btn{
+   margin-top: 1rem;
+   text-align: center;
+   padding: 1rem 3rem;
+   font-size: 1.8rem;
+   border-radius: .5rem;
+   border: var(--border);
+   color: var(--black);
+   cursor: pointer;
+   text-transform: capitalize;
+}
+
+.btn,
+.inline-btn{
+   background-color: var(--main-color);
+}
+
+.delete-btn,
+.inline-delete-btn{
+   background-color: var(--red);
+}
+
+.option-btn,
+.inline-option-btn{
+   background-color: var(--orange);
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover,
+.inline-btn:hover,
+.inline-delete-btn:hover,
+.inline-option-btn:hover{
+   background-color: var(--black);
+   color: white;
+}
+
+.disabled{
+   opacity: .5;
+   user-select: none;
+   pointer-events: none;
+}
+
+.message{
+   position: sticky;
+   top:0;
+   max-width: 1200px;
+   margin:0 auto;
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   gap:1rem;
+   justify-content: space-between;
+   background-color: var(--yellow);
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   color:var(--red);
+   cursor: pointer;
+}
+
+.message i:hover{
+   color:var(--black);
+}
+
+.empty{
+   border:var(--border);
+   padding:1.5rem;
+   text-align: center;
+   width: 100%;
+   font-size: 2rem;
+   text-transform: capitalize;
+   color:var(--red);
+}
+
+.flex-btn{
+   display: flex;
+   gap:1rem;
+}
+
+.header{
+   position: sticky;
+   top:0; left:0; right:0;
+   z-index: 1000;
+   background-color: var(--white);
+   border-bottom: var(--border);
+   background-color: #F9F0EB;
+   color: #644734;
+}
+
+.header .flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+}
+.header .flex .profile{
+   background-color: var(--white);
+   border:var(--border);
+   padding:1.5rem;
+   text-align: center;
+   position: absolute;
+   top:125%; right:2rem;
+   width: 30rem;
+   display: none;
+   animation: fadeIn .2s linear;
+}
+.header .flex .profile .name{
+   font-size: 2rem;
+   color:var(--black);
+   margin-bottom: .5rem;
+}
+.header .flex .profile .account{
+   margin-top: 1.5rem;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+.header .flex .profile .account a{
+   color:var(--black);
+}
+.header .flex .profile .account a:hover{
+   color:#e74c3c;
+   text-decoration: underline;
+}
+.header .flex .logo{
+   font-size: 50px;
+   font-weight: bold;
+   color: #644734;
+   letter-spacing: 5px;
+}
+
+.header .flex .navbar a{
+   font-size: 25px;
+   color: #644734;
+   margin:0 1rem;
+}
+
+.header .flex .navbar a:hover{
+   color:#F16A6A;
+   text-decoration: underline;
+}
+
+.header .flex .icons > *{
+   margin-left: 1.5rem;
+   font-size: 2.5rem;
+   color: #644734;
+   cursor: pointer;
+}
+
+.header .flex .icons > *:hover{
+   color: #e74c3c;
+}
+
+.header .flex .icons span{
+   font-size: 2rem;
+}
+
+#menu-btn{
+   display: none;
+}
+
+
+
+.header .flex .profile.active{
+   display: inline-block;
+}
+
+ .view-post .row
+ {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 2rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   background-color: var(--white);
+   padding: 2rem;
+   border-radius: .5rem;
+    
+}
+.view-post .row .col
+{
+    flex: 1 1 40rem;
+}
+.view-post .row .col image
+{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+}
+.view-post .row .col .title{
+   font-size: 2rem;
+   color: var(--black);
+}
+.view-post .row .col .flex
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.view-post .row .col .total-reviews
+{
+    text-align: center;
+}
+.view-post .row .col .flex .total-reviews h3{
+   font-size: 7rem;
+   color: var(--black);
+}
+.view-post .row .col .total-reviews i
+{
+    font-size: 3rem;
+}
+.view-post .row .col .total-reviews p
+{
+    font-size: 1.8rem;
+    color: var(--light-color);
+    padding-top: 1rem;
+
+}
+.view-post .row .col .total-ratings
+{
+    font-size: 2rem;
+}
+.view-post .row .col .total-ratings p
+{
+    padding: .3rem 0;
+}
+.view-post .row .col .total-ratings p i
+{
+    color: orange;
+}
+.view-post .row .col .total-ratings p i span
+{
+    color: var(--light-color);
+}
+.account-form form{
+   background: var(--white);
+   box-shadow: var(--box-shadow);
+   box-shadow: var(--box-shadow);
+   padding: 2rem;
+   border: var(--border);
+   border-radius: .5rem;
+   max-width: 50rem;
+   margin: 0 auto;
+}
+
+.account-form form h3{
+   padding-bottom: 1rem;
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+   text-align: center;
+}
+
+.account-form form p{
+   padding-top: 1rem;
+   font-size: 1.6rem;
+   color: black;
+}
+
+.account-form form p span{
+   color: var(--red);
+}
+
+.account-form form .box{
+   width: 100%;
+   border-radius: .5rem;
+   padding: 1.4rem;
+   font-size: 1.8rem;
+   color: black;
+   background-color: #999;
+   margin: 1rem 0;
+}
+
+.account-form form textarea{
+   height: 15rem;
+   resize: none;
+}
+
+.account-form form .image{
+   height: 20rem;
+   width: 100%;
+   object-fit: contain;
+   margin-top: .5rem;
+}
+
+.account-form form .link{
+   padding: 1rem 0;
+   text-align: center;
+   font-size: 1.8rem;
+   color: #999;
+}
+
+.account-form form .link a{
+   color: var(--red);
+}
+
+.account-form form .link a:hover{
+   text-decoration: underline;
+}
+.reviews-container .box-container{
+   display: grid;
+   row-gap: 3rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   border-radius: .5rem;
+   padding: 2rem;
+}
+
+.reviews-container .box-container .box{
+   border-bottom: var(--border);
+   overflow-x: hidden;
+   padding-bottom: 1.5rem;
+   position: relative;
+}
+
+.reviews-container .box-container .box .user{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+.reviews-container .box-container .box .user img{
+   height: 6rem;
+   width: 6rem;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.reviews-container .box-container .box .user h3{
+   font-size: 2.5rem;
+   height: 6rem;
+   width: 6rem;
+   border-radius: 50%;
+   background-color: var(--light-bg);
+   text-transform: uppercase;
+   text-align: center;
+   line-height: 6.5rem;   
+}
+
+.reviews-container .box-container .box .user p{
+   font-size: 1.8rem;
+   color: var(--black);
+   text-overflow: ellipsis;
+   overflow-x: hidden;
+   padding-bottom: .3rem;
+}
+
+.reviews-container .box-container .box .user span{
+   color: var(--light-color);
+   font-size: 1.5rem;
+}
+
+.reviews-container .box-container .box .ratings{
+   position: absolute;
+   top: 0; right: 0;
+   z-index: 10;
+}
+
+.reviews-container .box-container .box .ratings p{
+   border-radius: .5rem;
+   color: orange;
+   padding: .5rem 1rem;
+}
+
+.reviews-container .box-container .box .ratings p span{
+   font-size: 2rem;
+}
+
+.reviews-container .box-container .box .ratings p i{
+   font-size: 1.5rem;
+}
+
+.reviews-container .box-container .box .title{
+   font-size: 2rem;
+   color: var(--black);
+   padding: .5rem 0;
+}
+
+.reviews-container .box-container .box .description{
+   font-size: 1.6rem;
+   white-space: pre-line;
+   color: var(--light-color);
+   line-height: 1.5;
+}
